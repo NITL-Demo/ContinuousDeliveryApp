@@ -85,8 +85,6 @@ public class PizzaOrderController {
 	
 	
 	   for(Pizza pizza : pizzaOrderedList){	
-		   
-		   
 	    	 Pizza pizzaObj = pizzaService.findById(pizza.getId());
 	    	 
 	    	 if(pizzaObj != null){

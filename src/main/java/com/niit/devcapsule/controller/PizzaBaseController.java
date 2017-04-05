@@ -70,7 +70,7 @@ public class PizzaBaseController {
 	
     if (base == null) {
 	    
-      throw new ResourceNotFoundException("Pizza base with name " + name + " not found");
+      throw new ResourceNotFoundException("Pizza base with name " + name + " not found in store.");
     }
     return base;
   }

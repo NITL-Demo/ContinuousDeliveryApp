@@ -2,13 +2,14 @@ package com.niit.devcapsule.domain;
 
 import java.math.BigDecimal;
 import java.util.Set;
-
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.validation.constraints.NotNull;
+
+
 
 /**
  * The Class PizzaOrder.

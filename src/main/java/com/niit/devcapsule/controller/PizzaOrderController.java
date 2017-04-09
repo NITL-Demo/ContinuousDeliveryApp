@@ -75,7 +75,7 @@ public class PizzaOrderController {
   @ApiOperation(value = "Add a new order", response = PizzaOrder.class, produces = "application/json")
   @RequestMapping(value = "/orders", method = RequestMethod.POST, consumes = "application/json")
   public PizzaOrder addPizzaOrder(
-      @ApiParam(value = "New pizza order to add", required = true) @RequestBody PizzaOrder pizzaOrder) {
+      @ApiParam(value = "New pizza ordered to add", required = true) @RequestBody PizzaOrder pizzaOrder) {
 		  
 	
 	
@@ -121,7 +121,7 @@ public class PizzaOrderController {
     pizzaOrder.setId(id);
     PizzaOrder isItThere = pizzaOrderService.findById(id);
     if (isItThere == null) {
-	  throw new ResourceNotFoundException("Order with id " + id + " not found");
+	  throw new ResourceNotFoundException("Order with id " + id + " not found in database");
 	  
     }
 	

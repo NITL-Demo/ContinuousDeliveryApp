@@ -45,7 +45,6 @@ public class ToppingController {
   @ApiOperation(value = "Get all the toppings", response = Topping.class, responseContainer = "List", produces = "application/json")
   @RequestMapping(value = "/toppings", method = RequestMethod.GET)
   public Iterable<Topping> getToppings() {
-	
 	Iterable<Topping> toppingIterable = toppingService.findAll();  
     return toppingIterable;
   }
@@ -81,10 +80,8 @@ public class ToppingController {
   @ApiOperation(value = "Add a new topping", notes = "ID to be left blank. Will be ignored if passed.", response = Topping.class, produces = "application/json")
   @RequestMapping(value = "/toppings", method = RequestMethod.POST, consumes = "application/json")
   public Topping addTopping(@ApiParam(value = "New topping to add", required = true) @RequestBody Topping topping) {
-         logParameters[0] = "Topping Added";
+             logParameters[0] = "Topping Added";
 	     logParameters[1] = topping.getName();
-	     
-		 
 	     logger.info(loggerMessage, logParameters);
      
 	 return toppingService.addTopping(topping.getName());

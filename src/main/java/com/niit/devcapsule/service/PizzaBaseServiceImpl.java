@@ -22,7 +22,9 @@ public class PizzaBaseServiceImpl implements PizzaBaseService {
 	
   private static final Logger logger = LoggerFactory.getLogger(PizzaBaseServiceImpl.class);	
 
-  /** The pizza base dao. */
+  /** The pizza base dao. 
+   ** Its creates the Base for Pizza.
+  */
   @Autowired
   PizzaBaseDAO pizzaBaseDao;
 

@@ -135,7 +135,7 @@ public class PizzaOrderController {
    *          the id
    */
   @CrossOrigin(origins = "http://localhost:8000")
-  @ApiOperation(value = "Delete an existing order by its ID")
+  @ApiOperation(value = "Delete an existing order by its existing ID")
   @RequestMapping(value = "/orders/{id}", method = RequestMethod.DELETE)
   public void deletePizzaOrder(@ApiParam(value = "ID of the pizza order to delete", required = true) @PathVariable Long id) {
     PizzaOrder isItThere = pizzaOrderService.findById(id);

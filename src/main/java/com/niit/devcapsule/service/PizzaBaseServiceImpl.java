@@ -45,8 +45,7 @@ public class PizzaBaseServiceImpl implements PizzaBaseService {
    * @see com.niit.devcapsule.service.PizzaBaseService#addBase(java.lang.String)
    */
   @Override
-  public Base addBase(String name) {
-	//logger.info("TrackingId:99a80896-35a4-468c-9ec3-b762ab161429|ClientId:99a80897-35a4-468c-9ec3-b762ab161429|BaseName : {}  added", name);  
+  public Base addBase(String name) {	
     Base base = new Base(name);
     return pizzaBaseDao.save(base);
   }

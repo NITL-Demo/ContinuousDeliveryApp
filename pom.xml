@@ -106,6 +106,14 @@
 				  <artifactId>jgoodies-forms</artifactId>
 				  <version>1.6.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.pitest</groupId>
+			<artifactId>pitest-maven</artifactId>
+			<version>1.1.10</version>
+		</dependency>
+
+		
+		
 	</dependencies>
 
 	<build>
@@ -127,7 +135,41 @@
 				</configuration>
 			</plugin>
 			
-			
+			<!-- PIT -->
+			 	<plugin>
+						 <groupId>org.pitest</groupId>
+						 <artifactId>pitest-maven</artifactId>
+						 <version>1.1.10</version>
+						 <configuration>
+
+						<avoidCallsTo>
+							<avoidCallsTo>org.springframework.boot.SpringApplication.run</avoidCallsTo>
+							<avoidCallsTo>com.avios.logging.aspects</avoidCallsTo>
+							<avoidCallsTo>org.springframework.util</avoidCallsTo>
+							<avoidCallsTo>org.springframework.boot.*</avoidCallsTo>
+							<avoidCallsTo>org.apache.*</avoidCallsTo>
+							<avoidCallsTo>com.fasterxml.*</avoidCallsTo>
+							<avoidCallsTo>org.xml.*</avoidCallsTo>
+							<avoidCallsTo>org.codehaus.groovy.runtime</avoidCallsTo>
+							<avoidCallsTo>org.springframework.validation</avoidCallsTo>
+							<avoidCallsTo>ch.qos.*</avoidCallsTo>
+							<avoidCallsTo>org/slf4j/Logger</avoidCallsTo>
+							
+						</avoidCallsTo>
+						<targetClasses>
+								 <param>com.niit.devcapsule.*</param>
+								 </targetClasses>
+								 <targetTests>
+								 <param>com.niit.devcapsule.*</param>
+						</targetTests>
+						<failWhenNoMutations>false</failWhenNoMutations>
+						<timeoutFactor>10</timeoutFactor>
+						<timeoutConstant>50000</timeoutConstant>
+						<verbose>true</verbose>
+						<threads>4</threads>
+					</configuration>
+					 </plugin>
+			<!-- PIT -->
 			
 			
 		</plugins>

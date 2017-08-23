@@ -31,7 +31,7 @@ public class PizzaOrderServiceImpl implements PizzaOrderService {
    */
   @Override
   public PizzaOrder addOrder(PizzaOrder pizzaOrder) {
-	//logger.info("TrackingId:89a80896-35a4-468c-9ec3-b762ab161429|ClientId:89a80897-35a4-468c-9ec3-b762ab161429|Pizza OrderID: {} added",pizzaOrder.getId());	 
+	  logger.info("TrackingId:89a80896-35a4-468c-9ec3-b762ab161429|ClientId:89a80897-35a4-468c-9ec3-b762ab161429|Pizza OrderID: {} added",pizzaOrder.getId());	 
 	  
     return pizzaOrderDAO.save(pizzaOrder);
   }

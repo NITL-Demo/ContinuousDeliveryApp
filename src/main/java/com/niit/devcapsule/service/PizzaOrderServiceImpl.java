@@ -44,7 +44,7 @@ public class PizzaOrderServiceImpl implements PizzaOrderService {
    */
   @Override
   public void deleteOrder(Long id) {
-	//logger.info("TrackingId:89a80896-35a4-468c-9ec3-b762ab161429|ClientId:89a80897-35a4-468c-9ec3-b762ab161429|Pizza OrderID: {} deleted",id);	  
+	logger.info("TrackingId:89a80896-35a4-468c-9ec3-b762ab161429|ClientId:89a80897-35a4-468c-9ec3-b762ab161429|Pizza OrderID: {} deleted",id);	  
     pizzaOrderDAO.delete(id);
   }
 
